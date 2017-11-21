@@ -1,0 +1,6 @@
+C:\Users\Łukasz\Downloads\src\AGMiFARE\obj\Debug\AGMiFARE.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz\Downloads\src\AGMiFARE\obj\Debug\AGMiFARE.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz\Downloads\src\AGMiFARE\bin\Debug\AGMiFARE.dll
+C:\Users\Łukasz\Downloads\src\AGMiFARE\bin\Debug\AGMiFARE.pdb
+C:\Users\Łukasz\Downloads\src\AGMiFARE\obj\Debug\AGMiFARE.dll
+C:\Users\Łukasz\Downloads\src\AGMiFARE\obj\Debug\AGMiFARE.pdb

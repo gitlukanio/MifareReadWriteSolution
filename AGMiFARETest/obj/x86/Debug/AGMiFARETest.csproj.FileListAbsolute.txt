@@ -1,0 +1,9 @@
+C:\Users\Łukasz\Downloads\src\AGMiFARETest\obj\x86\Debug\AGMiFARETest.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz\Downloads\src\AGMiFARETest\obj\x86\Debug\AGMiFARETest.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz\Downloads\src\AGMiFARETest\bin\Debug\card_in.txt
+C:\Users\Łukasz\Downloads\src\AGMiFARETest\bin\Debug\AGMiFARETest.exe
+C:\Users\Łukasz\Downloads\src\AGMiFARETest\bin\Debug\AGMiFARETest.pdb
+C:\Users\Łukasz\Downloads\src\AGMiFARETest\bin\Debug\AGMiFARE.dll
+C:\Users\Łukasz\Downloads\src\AGMiFARETest\bin\Debug\AGMiFARE.pdb
+C:\Users\Łukasz\Downloads\src\AGMiFARETest\obj\x86\Debug\AGMiFARETest.exe
+C:\Users\Łukasz\Downloads\src\AGMiFARETest\obj\x86\Debug\AGMiFARETest.pdb

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{930647E0-5789-4FD1-BD33-B9D8DCA1E4F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AG.MiFARE</RootNamespace>
+    <AssemblyName>AGMiFARE</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AGCardReader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AGCardReader.ACR120\bin\Release\AGCardReader.dll</HintPath>
+    </Reference>
+    <Reference Include="AGCardReader.ACR120, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AGCardReader.ACR120\bin\Release\AGCardReader.ACR120.dll</HintPath>
+    </Reference>
+    <Reference Include="AGUtils">
+      <HintPath>..\Repository\AGUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessBits.cs" />
+    <Compile Include="AccessConditions.cs" />
+    <Compile Include="Exceptions\CardLoginException.cs" />
+    <Compile Include="Exceptions\CardReadException.cs" />
+    <Compile Include="Exceptions\CardWriteException.cs" />
+    <Compile Include="Exceptions\CardReadValueException.cs" />
+    <Compile Include="Exceptions\CardWriteValueException.cs" />
+    <Compile Include="Exceptions\CardIncValueException.cs" />
+    <Compile Include="Exceptions\CardDecValueException.cs" />
+    <Compile Include="MAD2.cs" />
+    <Compile Include="DataBlock.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="ICardReader.cs" />
+    <Compile Include="MAD.cs" />
+    <Compile Include="Sector.cs" />
+    <Compile Include="DataAreaAccessCondition.cs" />
+    <Compile Include="MiFARECard.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrailerAccessCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrailerDataBlock.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
