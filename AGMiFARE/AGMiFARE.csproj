@@ -56,6 +56,8 @@
   <ItemGroup>
     <Compile Include="AccessBits.cs" />
     <Compile Include="AccessConditions.cs" />
+    <Compile Include="cardAccessor.cs" />
+    <Compile Include="cardConnector.cs" />
     <Compile Include="Exceptions\CardLoginException.cs" />
     <Compile Include="Exceptions\CardReadException.cs" />
     <Compile Include="Exceptions\CardWriteException.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="ICardReader.cs" />
     <Compile Include="MAD.cs" />
+    <Compile Include="ModWinsCard.cs" />
     <Compile Include="Sector.cs" />
     <Compile Include="DataAreaAccessCondition.cs" />
     <Compile Include="MiFARECard.cs" />
