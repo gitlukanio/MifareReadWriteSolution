@@ -7,3 +7,12 @@ C:\Users\Łukasz\Downloads\src\AGMiFARETest\bin\Debug\AGMiFARE.dll
 C:\Users\Łukasz\Downloads\src\AGMiFARETest\bin\Debug\AGMiFARE.pdb
 C:\Users\Łukasz\Downloads\src\AGMiFARETest\obj\x86\Debug\AGMiFARETest.exe
 C:\Users\Łukasz\Downloads\src\AGMiFARETest\obj\x86\Debug\AGMiFARETest.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARETest\bin\Debug\card_in.txt
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARETest\bin\Debug\AGMiFARETest.exe
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARETest\bin\Debug\AGMiFARETest.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARETest\bin\Debug\AGMiFARE.dll
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARETest\bin\Debug\AGMiFARE.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARETest\obj\x86\Debug\AGMiFARETest.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARETest\obj\x86\Debug\AGMiFARETest.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARETest\obj\x86\Debug\AGMiFARETest.exe
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARETest\obj\x86\Debug\AGMiFARETest.pdb

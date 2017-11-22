@@ -7,15 +7,41 @@ using AG.MiFARE;
 
 namespace AGMiFARETest
 {
-    public class CardReader : cardConnector, ICardReader
+    public class CardReader : ICardReader
     {
+
+        cardAccessor cardAcc = new cardAccessor();
+
         //Byte[] _Data;
+        //A0A1A2A3A4A5 - 2481118E5355
+        //B6F0FC87F57F - E4FDAC292BED
+        //5888180ADBE6 - D572C9491137
+        //64EA317B7ABD - A39A286285DB
+        //898989890823 - 898989890823
 
+        string[] KeysA = new string[5]
+        {
+            "A0A1A2A3A4A5",
+            "B6F0FC87F57F",
+            "5888180ADBE6",
+            "64EA317B7ABD",
+            "898989890823"
+        };
 
+        string[] KeysB = new string[5]
+        {
+            "2481118E5355",
+            "E4FDAC292BED",
+            "D572C9491137",
+            "A39A286285DB",
+            "898989890823"
+        };
+
+        //cardConnector myc = new cardConnector();
 
         public bool GetCardType(out CardTypeEnum cardType)
         {
-            if (CardExist())
+            if (cardAcc.CardExist())
             {
                 cardType = CardTypeEnum.MiFARE_1K;
                 return true;
@@ -36,6 +62,41 @@ namespace AGMiFARETest
         public bool Login(int sector, KeyTypeEnum key)
         {
             Console.WriteLine("CardReader: Login({0}, {1}) invoked", sector, key);
+
+            cardAcc.GetNewCard();
+
+            Console.WriteLine("Czy karta istnieje:{0}", cardAcc.CardExist());
+
+
+
+
+            switch (key)
+            {
+
+
+                case KeyTypeEnum.KeyA:
+                    cardAcc.LoadKeys(KeysA[sector], 0);
+                    //LoadAuthkeysToAPDU("0");
+                    cardAcc.AuthBlock(sector * 4, 0);
+                    //authBlock("0");
+
+
+                    //authBlock(sector * 4, 0);
+                    //return false;
+                    break;
+                case KeyTypeEnum.KeyB:
+                    cardAcc.LoadKeys(KeysB[sector], 1);
+                    cardAcc.AuthBlock(sector * 4, 1);
+
+                    break;
+                case KeyTypeEnum.KeyDefaultF:
+                    cardAcc.LoadKeys("FFFFFFFFFFFF", 0);
+                    cardAcc.AuthBlock(sector * 4, 0);
+
+                    break;
+            }
+
+
             return true;
         }
 
@@ -49,12 +110,12 @@ namespace AGMiFARETest
         public bool Read(int sector, int datablock, out byte[] data)
         {
 
-            //getStringFromCard()
+            // data = readBlock(sector * 4 + datablock);
+            data = null;
+            //Console.WriteLine("Read returned code:{1}", BlockNumber, retCode);
 
 
-
-
-
+            return true;
         }
 
         /// <summary>
@@ -66,7 +127,10 @@ namespace AGMiFARETest
         /// <returns>true on success, false otherwise</returns>
         public bool Write(int sector, int datablock, byte[] data)
         {
-            throw new NotImplementedException();
+            //WriteData(data, sector * 4 + datablock);
+
+            return true;
+
         }
     }
 }

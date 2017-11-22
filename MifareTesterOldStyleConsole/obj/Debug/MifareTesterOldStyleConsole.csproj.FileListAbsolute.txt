@@ -1,0 +1,9 @@
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareTesterOldStyleConsole\bin\Debug\MifareTesterOldStyleConsole.exe.config
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareTesterOldStyleConsole\bin\Debug\MifareTesterOldStyleConsole.exe
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareTesterOldStyleConsole\bin\Debug\MifareTesterOldStyleConsole.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareTesterOldStyleConsole\bin\Debug\AGMiFARE.dll
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareTesterOldStyleConsole\bin\Debug\AGMiFARE.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareTesterOldStyleConsole\obj\Debug\MifareTesterOldStyleConsole.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareTesterOldStyleConsole\obj\Debug\MifareTesterOldStyleConsole.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareTesterOldStyleConsole\obj\Debug\MifareTesterOldStyleConsole.exe
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareTesterOldStyleConsole\obj\Debug\MifareTesterOldStyleConsole.pdb

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using AGMiFARETest;
 
 
 namespace AG.MiFARE
@@ -104,6 +105,8 @@ namespace AG.MiFARE
 
         public static void Main()
         {
+
+
             string strPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
 
             if (strPath.IndexOf("file:\\") != -1)
@@ -113,7 +116,7 @@ namespace AG.MiFARE
             MiFARECard card = new MiFARECard(cr);
 
             //MiFARECard card2 = new MiFARECard()
-            cr.GetCardType()
+            //cr.GetCardType();
 
 
             // controlla data block 3, sector 0
@@ -132,6 +135,31 @@ namespace AG.MiFARE
 
             card.Flush();
             cr.Flush(Path.Combine(strPath, "card_out.txt"));
+
+            for (int i = 0; i < 5; i++)
+                Console.WriteLine("***************************************************************************");
+
+            Console.WriteLine(" Tera moje ");
+
+            CardReader cardReader = new CardReader();
+            MiFARECard card2 = new MiFARECard(cardReader);
+
+            ReadData(card2, 0);
+
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    ReadData(card2, i);
+            //    Console.WriteLine("----------------");
+            //}
+
+
+
+
+
+
+
+
+
 
             Console.WriteLine("Press any key...");
             Console.ReadKey();

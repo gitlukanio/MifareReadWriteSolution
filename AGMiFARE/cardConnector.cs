@@ -7,7 +7,6 @@ namespace AG.MiFARE
 {
     public class cardConnector
     {
-
         //bool pinSubmission = true;
         //bool amountSubmission = true;
         //bool loyaltyClaiming = true;
@@ -308,7 +307,7 @@ namespace AG.MiFARE
             //Console.WriteLine($"APDU IN: { tmpStr }");
 
             retCode = ModWinsCard.SCardTransmit(hCard, ref pioSendRequest, ref SendBuff[0],
-                                 SendLen, ref pioSendRequest, ref RecvBuff[0], ref RecvLen);
+                SendLen, ref pioSendRequest, ref RecvBuff[0], ref RecvLen);
 
             //Console.WriteLine($"APDU OUT: {retCode}");
 
@@ -396,7 +395,7 @@ namespace AG.MiFARE
             retCode = ModWinsCard.SCardEstablishContext(ModWinsCard.SCARD_SCOPE_USER, 0, 0, ref hContext);
 
             retCode = ModWinsCard.SCardConnect(hContext, sCard, ModWinsCard.SCARD_SHARE_SHARED,
-                      ModWinsCard.SCARD_PROTOCOL_T0 | ModWinsCard.SCARD_PROTOCOL_T1, ref hCard, ref Protocol);
+                ModWinsCard.SCARD_PROTOCOL_T0 | ModWinsCard.SCARD_PROTOCOL_T1, ref hCard, ref Protocol);
 
             if (retCode != ModWinsCard.SCARD_S_SUCCESS)
             {
@@ -502,11 +501,15 @@ namespace AG.MiFARE
                 }
             }
         }
-
-
-
-
-
-
     }
+
+
+
+
+
+
+
+
+
+
 }

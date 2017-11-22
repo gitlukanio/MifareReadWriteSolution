@@ -10,3 +10,9 @@ C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\AG
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\AGMiFARE\obj\Debug\AGMiFARE.csproj.CoreCompileInputs.cache
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\AGMiFARE\obj\Debug\AGMiFARE.dll
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\AGMiFARE\obj\Debug\AGMiFARE.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARE\bin\Debug\AGMiFARE.dll
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARE\bin\Debug\AGMiFARE.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARE\obj\Debug\AGMiFARE.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARE\obj\Debug\AGMiFARE.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARE\obj\Debug\AGMiFARE.dll
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\AGMiFARE\obj\Debug\AGMiFARE.pdb

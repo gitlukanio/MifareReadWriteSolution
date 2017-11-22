@@ -8,7 +8,6 @@ using System.Threading;
 namespace AG.MiFARE
 {
 
-
     public class OnCardApearedEventArgs : EventArgs
     {
         //public cardConnector Karta { get; set; }
@@ -275,6 +274,11 @@ namespace AG.MiFARE
 
         // do others
     }
+
+
+
+
+
 
 
 
