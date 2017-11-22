@@ -44,13 +44,13 @@ namespace AG.MiFARE
                 sector0.Access.Trailer.KeyBRead = TrailerAccessCondition.ConditionEnum.Never;
                 sector0.Access.Trailer.KeyBWrite = TrailerAccessCondition.ConditionEnum.KeyB;
                 sector0.KeyA = "A0A1A2A3A4A5";
-                sector0.KeyB = "111111111111";
+                sector0.KeyB = "2481118E5355";
                 sector0.Access.MADVersion = AccessConditions.MADVersionEnum.Version1;
 
                 Console.WriteLine("Format completed...");
 
                 Console.WriteLine("Flushing trailer sector...");
-                sector0.FlushTrailer("A0A1A2A3A4A5", "111111111111");
+                sector0.FlushTrailer("A0A1A2A3A4A5", "2481118E5355");
                 Console.WriteLine("Flush completed...");
             }
         }
@@ -125,6 +125,10 @@ namespace AG.MiFARE
             ReadData(card, sector);
 
             WriteData(card, sector);
+
+            //Sector sec = card.GetSector(0);
+            //sec.Access.Trailer.AccessBitsRead = TrailerAccessCondition.ConditionEnum.KeyAOrB;
+
 
             card.Flush();
             cr.Flush(Path.Combine(strPath, "card_out.txt"));
