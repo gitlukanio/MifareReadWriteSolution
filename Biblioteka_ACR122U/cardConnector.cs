@@ -132,7 +132,7 @@ namespace ConsoleACR122U_2 //
 
             retCode = SendAPDUandDisplay(0);
 
-            Console.WriteLine("LoadAuthkey response: {0}", retCode.ToString());
+            //Console.WriteLine("LoadAuthkey response: {0}", retCode.ToString());
 
 
             return retCode.ToString();
@@ -254,6 +254,8 @@ namespace ConsoleACR122U_2 //
 
             retCode = SendAPDUandDisplay(0);
 
+            //Console.WriteLine("OLD_AuthBlock respone: {0}", retCode.ToString());
+
             if (retCode != ModWinsCard.SCARD_S_SUCCESS)
             {
                 //Console.Out.WriteLine("FAIL Authentication!");
@@ -278,7 +280,7 @@ namespace ConsoleACR122U_2 //
 
             retCode = SendAPDUandDisplay(0);
 
-            Console.WriteLine("AuthBlock respone: {0}", retCode.ToString());
+            //Console.WriteLine("AuthBlock respone: {0}", retCode.ToString());
 
             if (retCode != ModWinsCard.SCARD_S_SUCCESS)
             {

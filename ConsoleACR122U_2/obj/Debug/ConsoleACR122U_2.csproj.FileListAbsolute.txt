@@ -7,3 +7,12 @@ C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleA
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_2\bin\Debug\Biblioteka_ACR122U.dll
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_2\bin\Debug\Biblioteka_ACR122U.pdb
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_2\obj\Debug\ConsoleACR122U_2.csproj.CoreCompileInputs.cache
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_2\bin\Debug\ConsoleACR122U_2.exe.config
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_2\bin\Debug\ConsoleACR122U_2.exe
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_2\bin\Debug\ConsoleACR122U_2.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_2\bin\Debug\Biblioteka_ACR122U.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_2\bin\Debug\Biblioteka_ACR122U.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_2\obj\Debug\ConsoleACR122U_2.csprojResolveAssemblyReference.cache
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_2\obj\Debug\ConsoleACR122U_2.csproj.CoreCompileInputs.cache
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_2\obj\Debug\ConsoleACR122U_2.exe
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_2\obj\Debug\ConsoleACR122U_2.pdb

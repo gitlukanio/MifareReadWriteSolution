@@ -179,9 +179,9 @@ namespace ConsoleACR122U_2
 
             card = new cardConnector();
             card.connectCard();
-            card.authBlock(BlockNumber, KeyType, Key);
+            string tmp = card.authBlock(BlockNumber, KeyType, Key);
             //            card.Close();
-
+            //Console.WriteLine("Login authBlock response: {0}", tmp);
             //HaltWorker = false;
 
             return true;

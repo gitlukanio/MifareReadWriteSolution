@@ -19,14 +19,21 @@ namespace ConsoleACR122U_3
             CardReader cardReader = new CardReader();
             MiFARECard card = new MiFARECard(cardReader);
 
-            for (int i = 0; i < 7; i++)
-                ReadData(card, i);
+
+
+            while (true)
+            {
+                Console.WriteLine("=====================================");
+                for (int i = 0; i < 5; i++)
+                    ReadData(card, i);
+                Console.ReadKey();
+                //card.Flush();
+            }
 
 
 
 
-
-            Console.ReadKey();
+            // Console.ReadKey();
 
         }
 
