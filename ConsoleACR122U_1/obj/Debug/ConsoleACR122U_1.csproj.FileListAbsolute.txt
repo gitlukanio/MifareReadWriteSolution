@@ -1,0 +1,10 @@
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.exe.config
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.exe
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\bin\Debug\pcsc-sharp.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\bin\Debug\pcsc-sharp.xml
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csprojResolveAssemblyReference.cache
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.exe
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\bin\Debug\pcsc-sharp.dll.config
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csproj.CoreCompileInputs.cache

@@ -1,0 +1,6 @@
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\Biblioteka_ACR122U\bin\Debug\Biblioteka_ACR122U.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\Biblioteka_ACR122U\bin\Debug\Biblioteka_ACR122U.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\Biblioteka_ACR122U\obj\Debug\Biblioteka_ACR122U.csprojResolveAssemblyReference.cache
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\Biblioteka_ACR122U\obj\Debug\Biblioteka_ACR122U.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\Biblioteka_ACR122U\obj\Debug\Biblioteka_ACR122U.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\Biblioteka_ACR122U\obj\Debug\Biblioteka_ACR122U.csproj.CoreCompileInputs.cache

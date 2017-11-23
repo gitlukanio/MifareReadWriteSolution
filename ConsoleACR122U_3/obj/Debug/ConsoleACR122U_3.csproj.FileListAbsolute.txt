@@ -1,0 +1,11 @@
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\obj\Debug\ConsoleACR122U_3.csprojResolveAssemblyReference.cache
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\obj\Debug\ConsoleACR122U_3.csproj.CoreCompileInputs.cache
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\bin\Debug\ConsoleACR122U_3.exe.config
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\bin\Debug\ConsoleACR122U_3.exe
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\bin\Debug\ConsoleACR122U_3.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\bin\Debug\Biblioteka_ACR122U.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\bin\Debug\Biblioteka_ACR122U.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\obj\Debug\ConsoleACR122U_3.exe
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\obj\Debug\ConsoleACR122U_3.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\bin\Debug\ACR122U_Helper_Library.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_3\bin\Debug\ACR122U_Helper_Library.pdb
