@@ -19,7 +19,7 @@ namespace ConsoleACR122U_2 //
         public bool connActive = false;
         public bool autoDet;
         //string sCard = "ACS ACR122 0";      // change depending on reader
-        string sCard = "ACS ACR122U PICC Interface 0";
+        private string sCard = "ACS ACR122 0"; //"ACS ACR122U PICC Interface 0"; //"ACS ACR122 0" - do sprawdzenia w 
         public byte[] SendBuff = new byte[263];
         public byte[] RecvBuff = new byte[263];
         public int SendLen, RecvLen, nBytesRet, reqType, Aprotocol, dwProtocol, cbPciLength;

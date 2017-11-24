@@ -36,8 +36,9 @@ namespace ConsoleACR122U_1
                                 //DisplayReaderStatus(reader);
                                 Console.WriteLine("Cos jest\n\n\n");
 
+                                Console.WriteLine("XXX" + reader.ReaderName + "XXX");
+                               // reader.
 
-                                
 
 
 
