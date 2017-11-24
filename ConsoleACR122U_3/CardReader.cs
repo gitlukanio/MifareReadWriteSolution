@@ -38,7 +38,11 @@ namespace ConsoleACR122U_3
 
         public CardReader()
         {
+            Console.WriteLine("Disable Buzzer:");
             ztm.DisableBuzzer();
+            //Console.WriteLine("Led status:");
+            //ztm.mya.ShowLEDstatus();
+
         }
 
 
@@ -64,7 +68,7 @@ namespace ConsoleACR122U_3
         /// <returns>tru on success, false otherwise</returns>
         public bool Login(int sector, KeyTypeEnum key)
         {
-            bool resp = false;
+            // bool resp = false;
             switch (key)
             {
                 case KeyTypeEnum.KeyA:

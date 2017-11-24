@@ -179,6 +179,8 @@ namespace ConsoleACR122U_2
 
             card = new cardConnector();
             card.connectCard();
+            card.DisableBuzz();
+
             string tmp = card.authBlock(BlockNumber, KeyType, Key);
             //            card.Close();
             //Console.WriteLine("Login authBlock response: {0}", tmp);
@@ -203,8 +205,8 @@ namespace ConsoleACR122U_2
                 card = new cardConnector();
                 card.connectCard();
                 card.DisableBuzz();
-                card.Close();
-                HaltWorker = false;
+                //card.Close();
+                //HaltWorker = false;
 
             }
             catch (Exception ex)

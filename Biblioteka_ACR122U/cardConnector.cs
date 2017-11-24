@@ -378,23 +378,23 @@ namespace ConsoleACR122U_2 //
                 tmpStr = tmpStr + " " + string.Format("{0:X2}", SendBuff[indx]);
 
             }
-            //Console.WriteLine($"APDU IN: { tmpStr }");
+            Console.WriteLine($"APDU IN: { tmpStr }");
 
             retCode = ModWinsCard.SCardTransmit(hCard, ref pioSendRequest, ref SendBuff[0],
                                  SendLen, ref pioSendRequest, ref RecvBuff[0], ref RecvLen);
 
-            //Console.WriteLine($"APDU OUT: {retCode}");
+            Console.WriteLine($"APDU OUT: {retCode}");
 
-            //tmpStr = "";
-            //for (indx = 0; indx <= RecvLen - 1; indx++)
-            //{
-            //    //tmpStr = tmpStr + Convert.ToChar(RecvBuff[indx]);
-            //    //ToString
-            //    tmpStr = tmpStr + String.Format("{0:X2}", RecvBuff[indx]);
+            tmpStr = "";
+            for (indx = 0; indx <= RecvLen - 1; indx++)
+            {
+                //tmpStr = tmpStr + Convert.ToChar(RecvBuff[indx]);
+                //ToString
+                tmpStr = tmpStr + String.Format("{0:X2}", RecvBuff[indx]);
 
-            //}
+            }
 
-            //Console.WriteLine($"RecvBuff: { tmpStr }");
+            Console.WriteLine($"RecvBuff: { tmpStr }");
 
 
 
