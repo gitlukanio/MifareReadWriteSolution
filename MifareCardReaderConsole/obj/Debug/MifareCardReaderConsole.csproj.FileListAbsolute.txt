@@ -1,5 +1,5 @@
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csproj.CoreCompileInputs.cache
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csproj.CoreCompileInputs.cache
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderConsole.exe.config
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderConsole.exe
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderConsole.pdb

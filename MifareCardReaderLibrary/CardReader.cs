@@ -279,7 +279,6 @@ namespace MifareCardReaderLibrary
                 SendBuff[i] = DataToWrite[i - 5];
             }
 
-
             SendLen = 16 + 5;
             RecvLen = 2;
 
@@ -362,12 +361,12 @@ namespace MifareCardReaderLibrary
 
         public bool Read(int sector, int datablock, out byte[] data)
         {
-            throw new NotImplementedException();
+            return ReadBinaryBlock(sector * 4 + datablock, out data);
         }
 
         public bool Write(int sector, int datablock, byte[] data)
         {
-            throw new NotImplementedException();
+            return WriteBinaryBlock(sector * 4 + datablock, data);
         }
     }
 
