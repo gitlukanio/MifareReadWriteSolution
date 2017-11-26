@@ -15,27 +15,38 @@ namespace MifareCardReaderConsole
             byte[] ReceiveBuffor;
             CardReader cardReader = new CardReader();
             cardReader.DebugMode = true;
+
             Console.WriteLine("Connecting to card:");
-            cardReader.connectCard();
-            Console.WriteLine("Get data serial number:");
-            cardReader.GetData_SerialNumber(out ReceiveBuffor);
-            Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
-            Console.WriteLine("Get data ATS:");
-            cardReader.GetData_ATS(out ReceiveBuffor);
-            Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
+            //cardReader.connectCard();
+            cardReader.SetBuzzerOutputEnable(false);
+            //Console.WriteLine("Get data serial number:");
+            //cardReader.GetData_SerialNumber(out ReceiveBuffor);
+            //Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
+            //Console.WriteLine("Get data ATS:");
+            //cardReader.GetData_ATS(out ReceiveBuffor);
+            //Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
 
-            Console.WriteLine("Login for block 0");
-            cardReader.Login(0, KeyTypeEnum.KeyA);
-            Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
+            //Console.WriteLine("Login for block 0");
+            //cardReader.Login(0, KeyTypeEnum.KeyA);
+            //Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
 
 
 
-            Console.WriteLine("Zaczynamy zabawe:");
+            Console.WriteLine(" * * * Zaczynamy zabawe: * * * ");
 
             MiFARECard card = new MiFARECard(cardReader);
+            Sector sec;
+            for (int i = 0; i < 7; i++)
+            {
 
-            ReadData(card, 0);
+                ReadData(card, i);
 
+            }
+
+            Console.ReadKey();
+            card.Flush();
+
+           
 
 
 
@@ -78,27 +89,28 @@ namespace MifareCardReaderConsole
                 hexString3 += data3[i].ToString("X2") + " ";
             }
 
-            Sector sec = card.GetSector(sector);
-            string AcceessBitsRead = sec.Access.Trailer.AccessBitsRead.ToString();
-            string AccessBitsWrite = sec.Access.Trailer.AccessBitsWrite.ToString();
-            string KayARead = sec.Access.Trailer.KeyARead.ToString();
-            string KayAWrite = sec.Access.Trailer.KeyAWrite.ToString();
-            string KayBRead = sec.Access.Trailer.KeyBRead.ToString();
-            string KayBWrite = sec.Access.Trailer.KeyBWrite.ToString();
+            //Sector sec = card.GetSector(sector);
+            //string AcceessBitsRead = sec.Access.Trailer.AccessBitsRead.ToString();
+            //string AccessBitsWrite = sec.Access.Trailer.AccessBitsWrite.ToString();
+            //string KayARead = sec.Access.Trailer.KeyARead.ToString();
+            //string KayAWrite = sec.Access.Trailer.KeyAWrite.ToString();
+            //string KayBRead = sec.Access.Trailer.KeyBRead.ToString();
+            //string KayBWrite = sec.Access.Trailer.KeyBWrite.ToString();
 
+            Console.WriteLine("Sectot: {0}", sector);
             Console.WriteLine("DataBlock0:     " + hexString0);
             Console.WriteLine("DataBlock1:     " + hexString1);
             Console.WriteLine("DataBlock2:     " + hexString2);
             Console.WriteLine("TrailerBlock:   " + hexString3);
-            Console.WriteLine("AccesBitsRead:  " + AcceessBitsRead);
-            Console.WriteLine("AccesBitsWrite: " + AccessBitsWrite);
-            Console.WriteLine("Kay A Read      " + KayARead);
-            Console.WriteLine("Kay A Write     " + KayAWrite);
-            Console.WriteLine("Kay B Read      " + KayBRead);
-            Console.WriteLine("Kay B Write     " + KayBWrite);
-            Console.WriteLine("=========================================");
-            Console.WriteLine("Key A: " + sec.KeyA);
-            Console.WriteLine("Key B: " + sec.KeyB);
+            //Console.WriteLine("AccesBitsRead:  " + AcceessBitsRead);
+            //Console.WriteLine("AccesBitsWrite: " + AccessBitsWrite);
+            //Console.WriteLine("Kay A Read      " + KayARead);
+            //Console.WriteLine("Kay A Write     " + KayAWrite);
+            //Console.WriteLine("Kay B Read      " + KayBRead);
+            //Console.WriteLine("Kay B Write     " + KayBWrite);
+            //Console.WriteLine("=========================================");
+            //Console.WriteLine("Key A: " + sec.KeyA);
+            //Console.WriteLine("Key B: " + sec.KeyB);
 
 
 

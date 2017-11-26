@@ -19,6 +19,9 @@ namespace MifareCardReaderLibrary
         private string sCard = "ACS ACR122 0"; //"ACS ACR122U PICC Interface 0"; //"ACS ACR122 0" - do sprawdzenia w 
         public byte[] SendBuff = new byte[263];
         public byte[] RecvBuff = new byte[263];
+        public byte[] RecvCode = new byte[2];
+        public string RecvCodeStr = "";
+
         public int SendLen, RecvLen, nBytesRet, reqType, Aprotocol, dwProtocol, cbPciLength;
         public ModWinsCard.SCARD_READERSTATE RdrState;
         public ModWinsCard.SCARD_IO_REQUEST pioSendRequest;
@@ -72,6 +75,8 @@ namespace MifareCardReaderLibrary
                 RecvBuff[indx] = 0;
                 SendBuff[indx] = 0;
             }
+            RecvCode[0] = 0;
+            RecvCode[1] = 0;
         }
 
         private bool SendDataToAPDU()
@@ -93,8 +98,13 @@ namespace MifareCardReaderLibrary
                 Console.WriteLine($"APDU IN: { tmpStr }");
             }
 
+            this.connectCard(); //Do przeniesienia do methody wykrywającej kartę na czytniku
+
             retCode = ModWinsCard.SCardTransmit(hCard, ref pioSendRequest, ref SendBuff[0],
                 SendLen, ref pioSendRequest, ref RecvBuff[0], ref RecvLen);
+
+            RecvCode[0] = RecvBuff[RecvLen - 2];
+            RecvCode[1] = RecvBuff[RecvLen - 1];
 
             if (DebugMode)
             {
@@ -102,9 +112,7 @@ namespace MifareCardReaderLibrary
                 tmpStr = "";
                 for (indx = 0; indx <= RecvLen - 1; indx++)
                 {
-                    //tmpStr = tmpStr + Convert.ToChar(RecvBuff[indx]);
-                    //ToString
-                    tmpStr = tmpStr + String.Format("{0:X2}", RecvBuff[indx]);
+                    tmpStr = tmpStr + String.Format("{0:X2}", RecvBuff[indx]) + " ";
                 }
                 Console.WriteLine($"RecvBuff: { tmpStr }");
             }
@@ -115,6 +123,18 @@ namespace MifareCardReaderLibrary
             }
             else
             {
+
+                tmpStr = "";
+                for (indx = 0; indx <= 1; indx++)
+                {
+                    tmpStr = tmpStr + String.Format("{0:X2}", RecvCode[indx]);
+                }
+                RecvCodeStr = tmpStr;
+                if (DebugMode)
+                {
+                    Console.WriteLine("RetCode:  {0}", tmpStr);
+                }
+
                 return true;
             }
 
@@ -237,9 +257,6 @@ namespace MifareCardReaderLibrary
 
         }
 
-
-        // nie sprawdzone
-
         public bool ReadBinaryBlock(int blockNumber, out byte[] DataReceiveBuffor)
         {
             DataReceiveBuffor = new byte[16];
@@ -253,9 +270,19 @@ namespace MifareCardReaderLibrary
             SendLen = 5;
             RecvLen = DataReceiveBuffor.Length + 2;
 
+            string tmpStr = "";
+            for (int indx = 0; indx <= RecvLen - 1; indx++)
+            {
+                tmpStr = tmpStr + String.Format("{0:X2}", RecvBuff[indx]);
+            }
+
+
             if (SendDataToAPDU())
             {
-                Array.Copy(RecvBuff, DataReceiveBuffor, DataReceiveBuffor.Length);
+                if (RecvCodeStr == "9000")
+                {
+                    Array.Copy(RecvBuff, DataReceiveBuffor, DataReceiveBuffor.Length);
+                }
                 return true;
             }
             else
@@ -294,8 +321,44 @@ namespace MifareCardReaderLibrary
 
         }
 
+        // Value Block Related Commands
 
+        // Value Block Operation - Write, Increment, Decrement
 
+        // Read Value Block
+
+        // Restore Value Block - Copy a value from a value block to another value block
+
+        // Pseudo APDU commands
+
+        public bool SetBuzzerOutputEnable(bool BuzzerON)
+        {
+            ClearBuffers();
+            SendBuff[0] = 0xFF;                         // CLA
+            SendBuff[1] = 0x00;                         // INS: for stored key input
+            SendBuff[2] = 0x52;                         // P1: Key Structure
+            if (BuzzerON)
+            {
+                SendBuff[3] = 0xFF;                         // P2 : Key Number -  00h ~01h  
+            }
+            else
+            {
+                SendBuff[3] = 0x00;                         // P2 : Key Number -  00h ~01h  
+            }
+            SendBuff[4] = 0x00;                         // P2 : Key Number -  00h ~01h  
+
+            SendLen = 0x05;
+            RecvLen = 0x02;
+
+            if (SendDataToAPDU())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
 
@@ -323,7 +386,7 @@ namespace MifareCardReaderLibrary
             switch (key)
             {
                 case KeyTypeEnum.KeyA:
-                    if (!LoadAuthKeyToAPDU(Keys.A[sector * 4]))
+                    if (!LoadAuthKeyToAPDU(Keys.A[sector]))
                     {
                         return false;
                     }
@@ -335,7 +398,7 @@ namespace MifareCardReaderLibrary
 
                     break;
                 case KeyTypeEnum.KeyB:
-                    if (!LoadAuthKeyToAPDU(Keys.B[sector * 4]))
+                    if (!LoadAuthKeyToAPDU(Keys.B[sector]))
                     {
                         return false;
                     }

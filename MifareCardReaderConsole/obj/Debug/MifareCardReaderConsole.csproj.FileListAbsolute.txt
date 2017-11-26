@@ -1,5 +1,3 @@
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csprojResolveAssemblyReference.cache
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csproj.CoreCompileInputs.cache
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderConsole.exe.config
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderConsole.exe
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderConsole.pdb
@@ -9,5 +7,7 @@ C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSol
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\bin\Debug\ACR122U_Helper_Library.pdb
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderLibrary.pdb
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\bin\Debug\Biblioteka_ACR122U.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csproj.CoreCompileInputs.cache
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.exe
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.pdb

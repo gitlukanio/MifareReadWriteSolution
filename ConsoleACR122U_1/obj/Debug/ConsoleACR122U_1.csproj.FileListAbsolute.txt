@@ -26,3 +26,4 @@ C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSol
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csproj.CoreCompileInputs.cache
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.exe
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csprojResolveAssemblyReference.cache
