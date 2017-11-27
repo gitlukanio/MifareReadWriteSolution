@@ -11,3 +11,19 @@ C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSol
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csproj.CoreCompileInputs.cache
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.exe
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderConsole.exe.config
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderConsole.exe
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderConsole.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\ACR122U_Helper_Library.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderLibrary.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\Biblioteka_ACR122U.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\pcsc-sharp.dll
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\ACR122U_Helper_Library.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\MifareCardReaderLibrary.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\Biblioteka_ACR122U.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\pcsc-sharp.xml
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\bin\Debug\pcsc-sharp.dll.config
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csprojResolveAssemblyReference.cache
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.csproj.CoreCompileInputs.cache
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.exe
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderConsole\obj\Debug\MifareCardReaderConsole.pdb

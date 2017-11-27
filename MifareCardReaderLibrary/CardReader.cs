@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using ACR122U_Helper_Library;
@@ -15,8 +16,10 @@ namespace MifareCardReaderLibrary
         int Protocol;
         public bool connActive = false;
         public bool autoDet;
+        public bool DebugMode { get; set; }
         //string sCard = "ACS ACR122 0";      // change depending on reader
-        private string sCard = "ACS ACR122 0"; //"ACS ACR122U PICC Interface 0"; //"ACS ACR122 0" - do sprawdzenia w 
+        //private string sCard = "ACS ACR122U PICC Interface 0"; //"ACS ACR122 0" - do sprawdzenia w 
+        private string sCard = CardReaderFinder.FindReaderName(false);
         public byte[] SendBuff = new byte[263];
         public byte[] RecvBuff = new byte[263];
         public byte[] RecvCode = new byte[2];
@@ -25,7 +28,7 @@ namespace MifareCardReaderLibrary
         public int SendLen, RecvLen, nBytesRet, reqType, Aprotocol, dwProtocol, cbPciLength;
         public ModWinsCard.SCARD_READERSTATE RdrState;
         public ModWinsCard.SCARD_IO_REQUEST pioSendRequest;
-        public bool DebugMode { get; set; }
+
 
         public bool connectCard()
         {
@@ -66,7 +69,7 @@ namespace MifareCardReaderLibrary
             retCode = ModWinsCard.SCardReleaseContext(hCard);
         }
 
-        private void ClearBuffers()
+        protected void ClearBuffers()
         {
             long indx;
 
@@ -79,7 +82,7 @@ namespace MifareCardReaderLibrary
             RecvCode[1] = 0;
         }
 
-        private bool SendDataToAPDU()
+        protected bool SendDataToAPDU()
         {
             int indx;
             string tmpStr = "";
@@ -321,14 +324,6 @@ namespace MifareCardReaderLibrary
 
         }
 
-        // Value Block Related Commands
-
-        // Value Block Operation - Write, Increment, Decrement
-
-        // Read Value Block
-
-        // Restore Value Block - Copy a value from a value block to another value block
-
         // Pseudo APDU commands
 
         public bool SetBuzzerOutputEnable(bool BuzzerON)
@@ -432,6 +427,15 @@ namespace MifareCardReaderLibrary
             return WriteBinaryBlock(sector * 4 + datablock, data);
         }
     }
+
+    public enum VBOperationType
+    {
+        WriteVB_Value = 0x00,
+        IncrementByVB_Value = 0x01,
+        DecrementByVB_Value = 0x02
+    }
+
+
 
     public class Keys
     {

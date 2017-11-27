@@ -14,9 +14,11 @@ namespace MifareCardReaderConsole
         {
             byte[] ReceiveBuffor;
             CardReader cardReader = new CardReader();
-            cardReader.DebugMode = true;
+            CardValueReader cardValueReader = new CardValueReader();
+            //cardReader.DebugMode = true;
+            //cardValueReader.DebugMode = true;
 
-            Console.WriteLine("Connecting to card:");
+            //Console.WriteLine("Connecting to card:");
             //cardReader.connectCard();
             cardReader.SetBuzzerOutputEnable(false);
             //Console.WriteLine("Get data serial number:");
@@ -29,25 +31,73 @@ namespace MifareCardReaderConsole
             //Console.WriteLine("Login for block 0");
             //cardReader.Login(0, KeyTypeEnum.KeyA);
             //Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
+            //Console.WriteLine(" * * * Zaczynamy zabawe: * * * ");
 
-
-
-            Console.WriteLine(" * * * Zaczynamy zabawe: * * * ");
-
-            MiFARECard card = new MiFARECard(cardReader);
+            MiFARECard card = new MiFARECard(cardReader, cardValueReader);
             Sector sec;
-            for (int i = 0; i < 7; i++)
-            {
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    ReadData(card, i);
+            //}
+            //Console.WriteLine(" * * * READ SECTOR * * *");
+            //ReadData(card, 4);
+            //Console.WriteLine(" * * * INCREMENT SECTOR * * * ");
+            //card.IncValue(4, 0, 1);
+            //Console.WriteLine(" * * * FLUSH SECTOR * * * ");
+            //card.Flush();
+            //Console.WriteLine(" * * * READ SECTOR AFTER FLUSH* * *");
+            //card = new MiFARECard(cardReader, cardValueReader);
+            //ReadData(card, 4);
+            ////sec = card.GetSector(4);
+            //Console.WriteLine(" * * * DECREMENT SECTOR * * * ");
+            //card.DecValue(4, 0, 1);
+            ////Console.WriteLine(" * * * FLUSH SECTOR * * * ");
+            ////sec.Flush();
+            //Console.WriteLine(" * * * READ SECTOR AFTER FLUSH* * *");
+            //card = new MiFARECard(cardReader, cardValueReader);
+            //ReadData(card, 4);
+            ////sec = card.GetSector(4);
+            //// card.IncValue(4, 0, 1);
+            ////Console.ReadKey();
+            ////card.Flush();
+            //int value;
+            //cardValueReader.IncValue(4, 0, 1, out value);
+            //Console.WriteLine(" * * * * => Value: {0}", value);
+            //Console.WriteLine("Direct Incement");
+            //cardValueReader.ValueBlockOperation(12, VBOperationType.IncrementByVB_Value, value);
+            //Console.WriteLine("Read sector");
+            //card = new MiFARECard(cardReader, cardValueReader);
+            //ReadData(card, 4);
 
-                ReadData(card, i);
 
-            }
+            //card.GetData(4 * 4, 16);
+            Sector sector = card.GetSector(4);
 
-            Console.ReadKey();
-            card.Flush();
+            // Value Block Operation tests
+            int value = 0;
+            int sectorNr = 4;
+            //Sector sector = card.GetSector(4);
+            //sector.Access.DataAreas[0].Decrement
 
-           
 
+            ReadData(card, 4);
+            value = card.ReadValue(4, 0);
+            Console.WriteLine("Wartość: {0}", value);
+
+            Console.WriteLine(" * * * INCREMENT SECTOR * * * ");
+            card.IncValue(4, 0, 1);
+            card = new MiFARECard(cardReader, cardValueReader);
+            ReadData(card, 4);
+
+            Console.WriteLine(" * * * DECREMENT SECTOR * * * ");
+            card.DecValue(4, 0, 1);
+
+            card = new MiFARECard(cardReader, cardValueReader);
+            ReadData(card, 4);
+            value = card.ReadValue(4, 0);
+            Console.WriteLine("Wartość: {0}", value);
+            value = Int32.MaxValue - value;
+            Console.WriteLine("Wartość: {0}", value);
 
 
             Console.ReadKey();
@@ -97,17 +147,18 @@ namespace MifareCardReaderConsole
             //string KayBRead = sec.Access.Trailer.KeyBRead.ToString();
             //string KayBWrite = sec.Access.Trailer.KeyBWrite.ToString();
 
-            Console.WriteLine("Sectot: {0}", sector);
+            Console.WriteLine("Sector: {0}", sector);
             Console.WriteLine("DataBlock0:     " + hexString0);
             Console.WriteLine("DataBlock1:     " + hexString1);
             Console.WriteLine("DataBlock2:     " + hexString2);
             Console.WriteLine("TrailerBlock:   " + hexString3);
+
             //Console.WriteLine("AccesBitsRead:  " + AcceessBitsRead);
             //Console.WriteLine("AccesBitsWrite: " + AccessBitsWrite);
-            //Console.WriteLine("Kay A Read      " + KayARead);
-            //Console.WriteLine("Kay A Write     " + KayAWrite);
-            //Console.WriteLine("Kay B Read      " + KayBRead);
-            //Console.WriteLine("Kay B Write     " + KayBWrite);
+            //Console.WriteLine("Key A Read      " + KayARead);
+            //Console.WriteLine("Key A Write     " + KayAWrite);
+            //Console.WriteLine("Key B Read      " + KayBRead);
+            //Console.WriteLine("Key B Write     " + KayBWrite);
             //Console.WriteLine("=========================================");
             //Console.WriteLine("Key A: " + sec.KeyA);
             //Console.WriteLine("Key B: " + sec.KeyB);

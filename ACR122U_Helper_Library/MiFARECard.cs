@@ -292,6 +292,7 @@ namespace ACR122U_Helper_Library
         public void WriteValue(int sector, int datablock, int value)
         {
             Sector s = GetSector(sector);
+            _Reader.Login(sector, s.GetKeyType(datablock, OperationType.Write));
             s.WriteValue(datablock, value);
         }
         #endregion
@@ -300,6 +301,7 @@ namespace ACR122U_Helper_Library
         public int IncValue(int sector, int datablock, int delta)
         {
             Sector s = GetSector(sector);
+            _Reader.Login(sector, s.GetKeyType(datablock, OperationType.Increment));
             return s.IncValue(datablock, delta);
         }
         #endregion
@@ -308,6 +310,7 @@ namespace ACR122U_Helper_Library
         public int DecValue(int sector, int datablock, int delta)
         {
             Sector s = GetSector(sector);
+            _Reader.Login(sector, s.GetKeyType(datablock, OperationType.Decrement));
             return s.DecValue(datablock, delta);
         }
         #endregion
@@ -316,6 +319,7 @@ namespace ACR122U_Helper_Library
         public int CopyValue(int sector, int srcBlock, int dstBlock)
         {
             Sector s = GetSector(sector);
+            _Reader.Login(sector, s.GetKeyType(srcBlock, OperationType.Decrement));
             return s.CopyValue(srcBlock, dstBlock);
         }
         #endregion

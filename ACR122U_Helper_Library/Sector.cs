@@ -262,6 +262,11 @@ namespace ACR122U_Helper_Library
         public int ReadValue(int datablock)
         {
             int value;
+
+            //if (!_Card.Reader.Login(_Sector, KeyTypeEnum.KeyA)) //LLU
+            //    throw new CardLoginException(String.Format("Unable to login in sector {0} with key A", _Sector));
+
+
             if (!_Card.ValueReader.ReadValue(_Sector, datablock, out value))
                 throw new CardReadValueException("Error in ReadValue");
 
@@ -359,7 +364,7 @@ namespace ACR122U_Helper_Library
         #endregion
 
         #region GetWriteKey
-        private KeyTypeEnum GetWriteKey(int datablock)
+        private KeyTypeEnum GetWriteKey(int datablock) //private
         {
             if (Access == null)
                 return KeyTypeEnum.KeyDefaultF;
@@ -370,6 +375,31 @@ namespace ACR122U_Helper_Library
             return (Access.DataAreas[Math.Min(datablock, Access.DataAreas.Length - 1)].Write == DataAreaAccessCondition.ConditionEnum.KeyA) ? KeyTypeEnum.KeyA : KeyTypeEnum.KeyB;
         }
         #endregion
+
+        //LLU
+        public KeyTypeEnum GetKeyType(int dataBlock, OperationType operationType)
+        {
+            if (Access == null)
+                return KeyTypeEnum.KeyDefaultF;
+            switch (operationType)
+            {
+                case OperationType.Write:
+                    return (Access.DataAreas[dataBlock].Write == DataAreaAccessCondition.ConditionEnum.KeyA) ? KeyTypeEnum.KeyA : KeyTypeEnum.KeyB;
+
+                case OperationType.Increment:
+                    return (Access.DataAreas[dataBlock].Increment == DataAreaAccessCondition.ConditionEnum.KeyA) ? KeyTypeEnum.KeyA : KeyTypeEnum.KeyB;
+
+                case OperationType.Decrement:
+                    return (Access.DataAreas[dataBlock].Decrement == DataAreaAccessCondition.ConditionEnum.KeyA) ? KeyTypeEnum.KeyA : KeyTypeEnum.KeyB;
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(operationType), operationType, null);
+            }
+        }
+
+
+
+
 
         #region GetTrailerWriteKey
         private KeyTypeEnum GetTrailerWriteKey()
@@ -392,6 +422,12 @@ namespace ACR122U_Helper_Library
 
     }
 
+    public enum OperationType
+    {
+        Write,
+        Increment,
+        Decrement
+    }
 
     public static class HexEncoding
     {
