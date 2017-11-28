@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using ACR122U_Helper_Library;
 
@@ -30,6 +32,105 @@ namespace MifareCardReaderLibrary
         public ModWinsCard.SCARD_IO_REQUEST pioSendRequest;
 
 
+        // Constructor
+
+        public CardReader()
+        {
+            this.connectCard();
+            worker.WorkerSupportsCancellation = true;
+            worker.DoWork += Worker_DoWork;
+            //worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
+            worker.WorkerReportsProgress = true;
+            worker.ProgressChanged += Worker_ProgressChanged;
+            worker.RunWorkerAsync();
+        }
+
+        // Events and all related with it
+
+        private bool HaltWorker = false;
+        private bool WorkerBusy = false;
+
+        private void WorkerStatusBusy(bool Busy)
+        {
+            if (!WorkerBusy && Busy)
+            {
+                WorkerBusy = Busy;
+                Thread.Sleep(50);
+            }
+            else
+            {
+                WorkerBusy = Busy;
+            }
+        }
+
+        private void HaltWorkerNow(bool Halt)
+        {
+            if (!HaltWorker && Halt)
+            {
+                HaltWorker = Halt;
+                Thread.Sleep(50);
+            }
+            else
+            {
+                HaltWorker = Halt;
+            }
+        }
+
+        public event EventHandler OnCardAppeared;
+
+        protected virtual void RaiseEventOnCardAppeared()
+        {
+            if (OnCardAppeared != null)
+                OnCardAppeared(this, EventArgs.Empty);
+        }
+
+        public event EventHandler OnCardDisappeared;
+
+        protected virtual void RaiseEventOnCardDisappeared()
+        {
+            if (OnCardDisappeared != null)
+                OnCardDisappeared(this, EventArgs.Empty);
+        }
+
+        BackgroundWorker worker = new BackgroundWorker();
+
+        private void Worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Thread.Sleep(1000);
+
+            bool cardExistOld = false;
+            bool cardExistNow = false;
+            while (true)
+            {
+                if (!HaltWorker)
+                {
+                    WorkerStatusBusy(true);
+                    cardExistNow = connectCard();
+                    if (cardExistOld != cardExistNow)
+                    {
+                        if (cardExistNow)
+                        {
+                            worker.ReportProgress(10); // Pojawiła się karta na czytniku
+                        }
+                        else
+                        {
+                            worker.ReportProgress(20); // Zabrano kartę z czytnika
+                        }
+                        cardExistOld = cardExistNow;
+                    }
+                    WorkerStatusBusy(false);
+                }
+
+                Thread.Sleep(200);
+            }
+        }
+
+        private void Worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            if (e.ProgressPercentage == 10) RaiseEventOnCardAppeared();
+            if (e.ProgressPercentage == 20) RaiseEventOnCardDisappeared();
+        }
+
         public bool connectCard()
         {
             connActive = true;
@@ -40,7 +141,7 @@ namespace MifareCardReaderLibrary
 
             if (retCode != ModWinsCard.SCARD_S_SUCCESS)
             {
-                if (DebugMode)
+                if (DebugMode && !WorkerBusy)
                 {
                     Console.Out.WriteLine("Please Insert Card");
                 }
@@ -49,7 +150,7 @@ namespace MifareCardReaderLibrary
             }
             else
             {
-                if (DebugMode)
+                if (DebugMode && !WorkerBusy)
                 {
                     Console.Out.WriteLine("Card has been read");
                 }
@@ -101,10 +202,26 @@ namespace MifareCardReaderLibrary
                 Console.WriteLine($"APDU IN: { tmpStr }");
             }
 
-            this.connectCard(); //Do przeniesienia do methody wykrywającej kartę na czytniku
+            //this.connectCard(); //Do przeniesienia do methody wykrywającej kartę na czytniku
 
+            while (WorkerBusy)
+            {
+                Thread.Sleep(10);
+            }
+
+            HaltWorkerNow(true);
+
+            //if (connActive)
+            //{
             retCode = ModWinsCard.SCardTransmit(hCard, ref pioSendRequest, ref SendBuff[0],
                 SendLen, ref pioSendRequest, ref RecvBuff[0], ref RecvLen);
+            //}
+            //else
+            //{
+            //    this.connectCard();
+            //}
+
+            HaltWorkerNow(false);
 
             RecvCode[0] = RecvBuff[RecvLen - 2];
             RecvCode[1] = RecvBuff[RecvLen - 1];
@@ -126,7 +243,6 @@ namespace MifareCardReaderLibrary
             }
             else
             {
-
                 tmpStr = "";
                 for (indx = 0; indx <= 1; indx++)
                 {
@@ -137,7 +253,6 @@ namespace MifareCardReaderLibrary
                 {
                     Console.WriteLine("RetCode:  {0}", tmpStr);
                 }
-
                 return true;
             }
 
@@ -434,8 +549,6 @@ namespace MifareCardReaderLibrary
         IncrementByVB_Value = 0x01,
         DecrementByVB_Value = 0x02
     }
-
-
 
     public class Keys
     {

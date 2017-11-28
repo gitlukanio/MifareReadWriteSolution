@@ -15,8 +15,11 @@ namespace MifareCardReaderConsole
             byte[] ReceiveBuffor;
             CardReader cardReader = new CardReader();
             CardValueReader cardValueReader = new CardValueReader();
-            //cardReader.DebugMode = true;
-            //cardValueReader.DebugMode = true;
+            cardReader.DebugMode = true;
+            cardValueReader.DebugMode = true;
+
+            cardReader.OnCardAppeared += CardReader_OnCardAppeared;
+            cardReader.OnCardDisappeared += CardReader_OnCardDisappeared;
 
             //Console.WriteLine("Connecting to card:");
             //cardReader.connectCard();
@@ -35,10 +38,14 @@ namespace MifareCardReaderConsole
 
             MiFARECard card = new MiFARECard(cardReader, cardValueReader);
             Sector sec;
-            //for (int i = 0; i < 7; i++)
-            //{
-            //    ReadData(card, i);
-            //}
+            for (int i = 0; i < 7; i++)
+            {
+                ReadData(card, i);
+
+                Console.ReadKey();
+
+
+            }
             //Console.WriteLine(" * * * READ SECTOR * * *");
             //ReadData(card, 4);
             //Console.WriteLine(" * * * INCREMENT SECTOR * * * ");
@@ -80,27 +87,37 @@ namespace MifareCardReaderConsole
             //sector.Access.DataAreas[0].Decrement
 
 
-            ReadData(card, 4);
-            value = card.ReadValue(4, 0);
-            Console.WriteLine("Wartość: {0}", value);
+            //ReadData(card, 4);
+            //value = card.ReadValue(4, 0);
+            //Console.WriteLine("Wartość: {0}", value);
 
-            Console.WriteLine(" * * * INCREMENT SECTOR * * * ");
-            card.IncValue(4, 0, 1);
-            card = new MiFARECard(cardReader, cardValueReader);
-            ReadData(card, 4);
+            //Console.WriteLine(" * * * INCREMENT SECTOR * * * ");
+            //card.IncValue(4, 0, 1);
+            //card = new MiFARECard(cardReader, cardValueReader);
+            //ReadData(card, 4);
 
-            Console.WriteLine(" * * * DECREMENT SECTOR * * * ");
-            card.DecValue(4, 0, 1);
+            //Console.WriteLine(" * * * DECREMENT SECTOR * * * ");
+            //card.DecValue(4, 0, 1);
 
-            card = new MiFARECard(cardReader, cardValueReader);
-            ReadData(card, 4);
-            value = card.ReadValue(4, 0);
-            Console.WriteLine("Wartość: {0}", value);
-            value = Int32.MaxValue - value;
-            Console.WriteLine("Wartość: {0}", value);
+            //card = new MiFARECard(cardReader, cardValueReader);
+            //ReadData(card, 4);
+            //value = card.ReadValue(4, 0);
+            //Console.WriteLine("Wartość: {0}", value);
+            //value = Int32.MaxValue - value;
+            //Console.WriteLine("Wartość: {0}", value);
 
 
             Console.ReadKey();
+        }
+
+        private static void CardReader_OnCardDisappeared(object sender, EventArgs e)
+        {
+            Console.WriteLine("Karta znikła!!!");
+        }
+
+        private static void CardReader_OnCardAppeared(object sender, EventArgs e)
+        {
+            Console.WriteLine("Pojawiła się nowa karta");
         }
 
         public static string WriteDataFromBuff(ref byte[] buf)

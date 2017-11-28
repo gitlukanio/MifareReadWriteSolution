@@ -9,6 +9,17 @@ namespace MifareCardReaderLibrary
 {
     public class CardValueReader : CardReader, ICardValueReader
     {
+
+
+        // Events and all related with it
+
+
+
+
+
+
+
+
         // Value Block Related Commands
 
         // Value Block Operation - Write, Increment, Decrement
