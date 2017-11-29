@@ -8,16 +8,6 @@ C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleA
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.pdb
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\bin\Debug\pcsc-sharp.dll.config
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\ACR122U_Solutions\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csproj.CoreCompileInputs.cache
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.exe.config
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.exe
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.pdb
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\pcsc-sharp.dll
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\pcsc-sharp.xml
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\pcsc-sharp.dll.config
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csproj.CoreCompileInputs.cache
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.exe
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.pdb
-C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csprojResolveAssemblyReference.cache
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.exe.config
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.exe
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.pdb
@@ -28,3 +18,13 @@ C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\Co
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csproj.CoreCompileInputs.cache
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.exe
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.exe.config
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.exe
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\ConsoleACR122U_1.pdb
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\pcsc-sharp.dll
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\pcsc-sharp.xml
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\bin\Debug\pcsc-sharp.dll.config
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.exe
+C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ConsoleACR122U_1\obj\Debug\ConsoleACR122U_1.pdb
