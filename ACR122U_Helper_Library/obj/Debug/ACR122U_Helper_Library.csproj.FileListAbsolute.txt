@@ -15,3 +15,4 @@ C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSol
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ACR122U_Helper_Library\obj\Debug\ACR122U_Helper_Library.csproj.CoreCompileInputs.cache
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ACR122U_Helper_Library\obj\Debug\ACR122U_Helper_Library.dll
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\ACR122U_Helper_Library\obj\Debug\ACR122U_Helper_Library.pdb
+C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\ACR122U_Helper_Library\obj\Debug\ACR122U_Helper_Library.csprojResolveAssemblyReference.cache
