@@ -43,20 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardReader.cs" />
-    <Compile Include="CardReaderFinder.cs" />
-    <Compile Include="CardValueReader.cs" />
+    <Compile Include="MifareCard\AccessBits.cs" />
+    <Compile Include="MifareCard\AccessConditions.cs" />
+    <Compile Include="CardReader\CardReader.cs" />
+    <Compile Include="CardReader\CardReaderFinder.cs" />
+    <Compile Include="MifareCard\DataAreaAccessCondition.cs" />
+    <Compile Include="MifareCard\DataBlock.cs" />
+    <Compile Include="Exceptions\CardDecValueException.cs" />
+    <Compile Include="Exceptions\CardIncValueException.cs" />
+    <Compile Include="Exceptions\CardLoginException.cs" />
+    <Compile Include="Exceptions\CardReadException.cs" />
+    <Compile Include="Exceptions\CardReadValueException.cs" />
+    <Compile Include="Exceptions\CardWriteException.cs" />
+    <Compile Include="Exceptions\CardWriteValueException.cs" />
+    <Compile Include="MifareCard\Extensions.cs" />
+    <Compile Include="MifareCard\ICardReader.cs" />
+    <Compile Include="MifareCard\MAD.cs" />
+    <Compile Include="MifareCard\MAD2.cs" />
+    <Compile Include="MifareCard\MiFARECard.cs" />
+    <Compile Include="CardReader\ModWinsCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ACR122U_Helper_Library\ACR122U_Helper_Library.csproj">
-      <Project>{a5644e2a-c620-4047-a213-f617d8045743}</Project>
-      <Name>ACR122U_Helper_Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Biblioteka_ACR122U\Biblioteka_ACR122U.csproj">
-      <Project>{1ABA1474-81A0-4BA3-866A-1C255E8AC9E9}</Project>
-      <Name>Biblioteka_ACR122U</Name>
-    </ProjectReference>
+    <Compile Include="MifareCard\Sector.cs" />
+    <Compile Include="MifareCard\TrailerAccessCondition.cs" />
+    <Compile Include="MifareCard\TrailerDataBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

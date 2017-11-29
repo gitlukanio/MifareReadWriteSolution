@@ -284,6 +284,7 @@ namespace ACR122U_Helper_Library
         public int ReadValue(int sector, int datablock)
         {
             Sector s = GetSector(sector);
+            _Reader.Login(sector, s.GetKeyType(datablock, OperationType.Decrement));
             return s.ReadValue(datablock);
         }
         #endregion

@@ -10,11 +10,7 @@ C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSol
 C:\Users\Łukasz\Documents\Visual Studio 2017\Projects\MifareCardReaderWriterSolution\MifareCardReaderLibrary\obj\Debug\MifareCardReaderLibrary.pdb
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\bin\Debug\MifareCardReaderLibrary.dll
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\bin\Debug\MifareCardReaderLibrary.pdb
-C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\bin\Debug\ACR122U_Helper_Library.dll
-C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\bin\Debug\Biblioteka_ACR122U.dll
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\bin\Debug\pcsc-sharp.dll
-C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\bin\Debug\ACR122U_Helper_Library.pdb
-C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\bin\Debug\Biblioteka_ACR122U.pdb
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\bin\Debug\pcsc-sharp.xml
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\bin\Debug\pcsc-sharp.dll.config
 C:\Users\luczkluk\Documents\Moje\ProjektyVisualStudio\MifareReadWriteSolution\MifareCardReaderLibrary\obj\Debug\MifareCardReaderLibrary.csprojResolveAssemblyReference.cache

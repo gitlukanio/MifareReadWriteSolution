@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ACR122U_Helper_Library;
 using MifareCardReaderLibrary;
 
 namespace MifareCardReaderConsole
@@ -12,100 +9,42 @@ namespace MifareCardReaderConsole
     {
         static void Main(string[] args)
         {
-            byte[] ReceiveBuffor;
+            //byte[] ReceiveBuffor;
             CardReader cardReader = new CardReader();
-            CardValueReader cardValueReader = new CardValueReader();
-            cardReader.DebugMode = true;
-            cardValueReader.DebugMode = true;
-
+            MiFARECard card = new MiFARECard(cardReader, cardReader);
+            //cardReader.DebugMode = true;
             cardReader.OnCardAppeared += CardReader_OnCardAppeared;
             cardReader.OnCardDisappeared += CardReader_OnCardDisappeared;
-
-            //Console.WriteLine("Connecting to card:");
-            //cardReader.connectCard();
-            cardReader.SetBuzzerOutputEnable(false);
-            //Console.WriteLine("Get data serial number:");
-            //cardReader.GetData_SerialNumber(out ReceiveBuffor);
-            //Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
-            //Console.WriteLine("Get data ATS:");
-            //cardReader.GetData_ATS(out ReceiveBuffor);
-            //Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
-
-            //Console.WriteLine("Login for block 0");
-            //cardReader.Login(0, KeyTypeEnum.KeyA);
-            //Console.WriteLine("Main receive buffor :" + WriteDataFromBuff(ref ReceiveBuffor));
-            //Console.WriteLine(" * * * Zaczynamy zabawe: * * * ");
-
-            MiFARECard card = new MiFARECard(cardReader, cardValueReader);
-            Sector sec;
-            for (int i = 0; i < 7; i++)
+            try
             {
-                ReadData(card, i);
-
-                Console.ReadKey();
-
-
+                int indx = 0;
+                cardReader.SetBuzzerOutputEnable(false);
+                while (true)
+                {
+                    //ReadData(card, i);
+                    //{
+                    //int LiczbaZcarty = card.ReadValue(4, 0);
+                    //Console.WriteLine("Uzyskana liczba z bloku 0: {0}", LiczbaZcarty);
+                    //int LiczbaZcarty2 = card.ReadValue(4, 1);
+                    //Console.WriteLine("Uzyskana liczba z bloku 0: {0}", LiczbaZcarty2);
+                    ShowAccessConditions(card, indx);
+                    indx++;
+                    // }
+                    Console.ReadKey();
+                }
+                //Console.ReadKey();
             }
-            //Console.WriteLine(" * * * READ SECTOR * * *");
-            //ReadData(card, 4);
-            //Console.WriteLine(" * * * INCREMENT SECTOR * * * ");
-            //card.IncValue(4, 0, 1);
-            //Console.WriteLine(" * * * FLUSH SECTOR * * * ");
-            //card.Flush();
-            //Console.WriteLine(" * * * READ SECTOR AFTER FLUSH* * *");
-            //card = new MiFARECard(cardReader, cardValueReader);
-            //ReadData(card, 4);
-            ////sec = card.GetSector(4);
-            //Console.WriteLine(" * * * DECREMENT SECTOR * * * ");
-            //card.DecValue(4, 0, 1);
-            ////Console.WriteLine(" * * * FLUSH SECTOR * * * ");
-            ////sec.Flush();
-            //Console.WriteLine(" * * * READ SECTOR AFTER FLUSH* * *");
-            //card = new MiFARECard(cardReader, cardValueReader);
-            //ReadData(card, 4);
-            ////sec = card.GetSector(4);
-            //// card.IncValue(4, 0, 1);
-            ////Console.ReadKey();
-            ////card.Flush();
-            //int value;
-            //cardValueReader.IncValue(4, 0, 1, out value);
-            //Console.WriteLine(" * * * * => Value: {0}", value);
-            //Console.WriteLine("Direct Incement");
-            //cardValueReader.ValueBlockOperation(12, VBOperationType.IncrementByVB_Value, value);
-            //Console.WriteLine("Read sector");
-            //card = new MiFARECard(cardReader, cardValueReader);
-            //ReadData(card, 4);
+            catch (Exception e)
+            {
+                Console.WriteLine("Wystąpił błąd: {0}", e.Message);
+            }
 
-
-            //card.GetData(4 * 4, 16);
-            Sector sector = card.GetSector(4);
-
-            // Value Block Operation tests
-            int value = 0;
-            int sectorNr = 4;
-            //Sector sector = card.GetSector(4);
-            //sector.Access.DataAreas[0].Decrement
-
-
-            //ReadData(card, 4);
-            //value = card.ReadValue(4, 0);
-            //Console.WriteLine("Wartość: {0}", value);
-
-            //Console.WriteLine(" * * * INCREMENT SECTOR * * * ");
-            //card.IncValue(4, 0, 1);
-            //card = new MiFARECard(cardReader, cardValueReader);
-            //ReadData(card, 4);
-
-            //Console.WriteLine(" * * * DECREMENT SECTOR * * * ");
-            //card.DecValue(4, 0, 1);
-
-            //card = new MiFARECard(cardReader, cardValueReader);
-            //ReadData(card, 4);
-            //value = card.ReadValue(4, 0);
-            //Console.WriteLine("Wartość: {0}", value);
-            //value = Int32.MaxValue - value;
-            //Console.WriteLine("Wartość: {0}", value);
-
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    int LiczbaZcarty = card.ReadValue(4, 0);
+            //    Console.WriteLine("Uzyskana liczba z karty: {0}", LiczbaZcarty);
+            //    Console.ReadKey();
+            //}
 
             Console.ReadKey();
         }
@@ -133,8 +72,6 @@ namespace MifareCardReaderConsole
 
         public static void ReadData(MiFARECard card, int sector)
         {
-
-
             Console.WriteLine("Sector {0}: ", sector);
             Byte[] data0 = card.GetData(sector, 0, 16);
             Byte[] data1 = card.GetData(sector, 1, 16);
@@ -184,6 +121,52 @@ namespace MifareCardReaderConsole
 
             Console.WriteLine();
         }
+
+        public static void ShowAccessConditions(MiFARECard card, int sectorNumber)
+        {
+            Sector sec = card.GetSector(sectorNumber);
+            string AcceessBitsRead = sec.Access.Trailer.AccessBitsRead.ToString();
+            string AccessBitsWrite = sec.Access.Trailer.AccessBitsWrite.ToString();
+            string KayARead = sec.Access.Trailer.KeyARead.ToString();
+            string KayAWrite = sec.Access.Trailer.KeyAWrite.ToString();
+            string KayBRead = sec.Access.Trailer.KeyBRead.ToString();
+            string KayBWrite = sec.Access.Trailer.KeyBWrite.ToString();
+
+            List<string> DataReadCondition = new List<string>();
+            List<string> DataWriteCondition = new List<string>();
+            List<string> DataIncrementCondition = new List<string>();
+            List<string> DataDecrementCondition = new List<string>();
+
+
+            for (int i = 0; i < 3; i++)
+            {
+                DataReadCondition.Add(sec.Access.DataAreas[i].Read.ToString());
+                DataWriteCondition.Add(sec.Access.DataAreas[i].Write.ToString());
+                DataIncrementCondition.Add(sec.Access.DataAreas[i].Increment.ToString());
+                DataDecrementCondition.Add(sec.Access.DataAreas[i].Decrement.ToString());
+            }
+            string border = "|-------------------------------------------------|";
+            Console.WriteLine(" Data sector {0} conditions ", sectorNumber);
+            Console.WriteLine(border);
+            Console.WriteLine("| BlockNR |   READ  |  WRITE  |  INCRE  |  DECRE  |");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("| {4,7} | {0,7} | {1,7} | {2,7} | {3,7} |", DataReadCondition.ElementAt(0), DataWriteCondition.ElementAt(i), DataIncrementCondition.ElementAt(i), DataDecrementCondition.ElementAt(i), i);
+            }
+
+            Console.WriteLine(border);
+            Console.WriteLine(" Trailer {0} conditions ", sectorNumber);
+            border = "|-----------------------------------------------------------|";
+            Console.WriteLine(border);
+            Console.WriteLine("|      Key A        |   Access Bits     |      Key B        |");
+            Console.WriteLine("|   READ  |  WRITE  |   READ  |  WRITE  |   READ  |  WRITE  |");
+            Console.WriteLine("| {0,7} | {1,7} | {2,7} | {3,7} | {4,7} | {5,7} |",
+                 KayARead, KayAWrite, AcceessBitsRead, AccessBitsWrite, KayBRead, KayBWrite);
+            Console.WriteLine(border);
+            Console.WriteLine("\n=============================================================\n");
+        }
+
+
 
 
     }

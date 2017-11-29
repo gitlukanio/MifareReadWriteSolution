@@ -49,10 +49,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ACR122U_Helper_Library\ACR122U_Helper_Library.csproj">
-      <Project>{a5644e2a-c620-4047-a213-f617d8045743}</Project>
-      <Name>ACR122U_Helper_Library</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MifareCardReaderLibrary\MifareCardReaderLibrary.csproj">
       <Project>{e87e89e1-4d73-492f-aa3c-5660eb2d86b8}</Project>
       <Name>MifareCardReaderLibrary</Name>

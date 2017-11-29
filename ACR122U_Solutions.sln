@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleACR122U_1", "ConsoleACR122U_1\ConsoleACR122U_1.csproj", "{FDAAC05A-8396-46B3-8227-6D05CD6A655F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleACR122U_2", "ConsoleACR122U_2\ConsoleACR122U_2.csproj", "{4FE7D843-BCB0-45F7-B377-AD3BD9037F55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka_ACR122U", "Biblioteka_ACR122U\Biblioteka_ACR122U.csproj", "{1ABA1474-81A0-4BA3-866A-1C255E8AC9E9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleACR122U_3", "ConsoleACR122U_3\ConsoleACR122U_3.csproj", "{F20CF58E-A72D-46A7-9F61-C19DDFD99D39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACR122U_Helper_Library", "ACR122U_Helper_Library\ACR122U_Helper_Library.csproj", "{A5644E2A-C620-4047-A213-F617D8045743}"
 EndProject
@@ -35,10 +33,6 @@ Global
 		{1ABA1474-81A0-4BA3-866A-1C255E8AC9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ABA1474-81A0-4BA3-866A-1C255E8AC9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ABA1474-81A0-4BA3-866A-1C255E8AC9E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F20CF58E-A72D-46A7-9F61-C19DDFD99D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F20CF58E-A72D-46A7-9F61-C19DDFD99D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F20CF58E-A72D-46A7-9F61-C19DDFD99D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F20CF58E-A72D-46A7-9F61-C19DDFD99D39}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A5644E2A-C620-4047-A213-F617D8045743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5644E2A-C620-4047-A213-F617D8045743}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5644E2A-C620-4047-A213-F617D8045743}.Release|Any CPU.ActiveCfg = Release|Any CPU
