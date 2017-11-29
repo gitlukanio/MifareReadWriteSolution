@@ -9,7 +9,7 @@ namespace MifareCardReaderConsole
     {
         static void Main(string[] args)
         {
-            //byte[] ReceiveBuffor;///////
+            //byte[] ReceiveBuffor;//////////
             CardReader cardReader = new CardReader();
             MiFARECard card = new MiFARECard(cardReader, cardReader);
             //cardReader.DebugMode = true;
